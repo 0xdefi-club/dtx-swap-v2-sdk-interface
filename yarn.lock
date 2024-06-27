@@ -1706,9 +1706,9 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@uniswap/sdk-core@https://github.com/0xdefi-club/dtx-swap-sdk-core.git":
+"@uniswap/sdk-core@https://github.com/0xdefi-club/dtx-swap-sdk-core-interface.git":
   version "3.0.1"
-  resolved "https://github.com/0xdefi-club/dtx-swap-sdk-core.git#fd00008843c2345bf26cbf4867edcda6a7f54389"
+  resolved "https://github.com/0xdefi-club/dtx-swap-sdk-core-interface.git#41aab52506744c25ae9fd101b75d6a2f54a82c21"
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
