@@ -39,10 +39,7 @@ export class Pair {
 
   public static getAddress(tokenA: Token, tokenB: Token): string {
     return computePairAddress({
-      factoryAddress:
-        tokenA && tokenA.chainId && [84532, 167000].indexOf(tokenA.chainId)
-          ? FACTORY_ADDRESS_MAP[tokenA.chainId as keyof typeof FACTORY_ADDRESS_MAP]
-          : FACTORY_ADDRESS,
+      factoryAddress: FACTORY_ADDRESS_MAP[tokenA.chainId as keyof typeof FACTORY_ADDRESS_MAP] ?? FACTORY_ADDRESS,
       tokenA,
       tokenB
     })
