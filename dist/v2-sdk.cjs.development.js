@@ -239,13 +239,13 @@ var Pair = /*#__PURE__*/function () {
   function Pair(currencyAmountA, tokenAmountB) {
     var tokenAmounts = currencyAmountA.currency.sortsBefore(tokenAmountB.currency) // does safety checks
     ? [currencyAmountA, tokenAmountB] : [tokenAmountB, currencyAmountA];
-    this.liquidityToken = new sdkCore.Token(tokenAmounts[0].currency.chainId, Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency), 18, 'UNI-V2', 'Uniswap V2');
+    this.liquidityToken = new sdkCore.Token(tokenAmounts[0].currency.chainId, Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency), 18, 'DTXSwap-V1', 'DTXSwap-V1');
     this.tokenAmounts = tokenAmounts;
   }
 
   Pair.getAddress = function getAddress(tokenA, tokenB) {
     return computePairAddress({
-      factoryAddress: FACTORY_ADDRESS,
+      factoryAddress: tokenA && tokenA.chainId && [84532, 167000].indexOf(tokenA.chainId) ? FACTORY_ADDRESS_MAP[tokenA.chainId] : FACTORY_ADDRESS,
       tokenA: tokenA,
       tokenB: tokenB
     });
