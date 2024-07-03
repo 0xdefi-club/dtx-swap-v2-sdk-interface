@@ -156,6 +156,9 @@ export class Trade<TInput extends Currency, TOutput extends Currency, TTradeType
         tokenAmounts[tokenAmounts.length - 1].denominator
       )
     } else {
+      console.log(amount.currency.equals(route.output), 'output')
+      console.log(amount.currency, 'amount.currency')
+      console.log(route.output, 'route.output')
       invariant(amount.currency.equals(route.output), 'OUTPUT')
       tokenAmounts[tokenAmounts.length - 1] = amount.wrapped
       for (let i = route.path.length - 1; i > 0; i--) {
