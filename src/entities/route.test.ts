@@ -3,8 +3,8 @@ import { Pair, Route } from './index'
 
 describe('Route', () => {
   const ETHER = Ether.onChain(1)
-  const token0 = new Token(1, '0x0000000000000000000000000000000000000001', 18, 't0')
-  const token1 = new Token(1, '0x0000000000000000000000000000000000000002', 18, 't1')
+  const token0 = new Token(1, '0x227e77752F41CeBA354003d84F1a568De88a5868', 18, 'DAIc')
+  const token1 = new Token(1, '0x120aBe28DD008FAdA455b1CA70E27582D32fa92D', 18, 'USDc')
   const weth = WETH9[1]
   const pair_0_1 = new Pair(CurrencyAmount.fromRawAmount(token0, '100'), CurrencyAmount.fromRawAmount(token1, '200'))
   const pair_0_weth = new Pair(CurrencyAmount.fromRawAmount(token0, '100'), CurrencyAmount.fromRawAmount(weth, '100'))
